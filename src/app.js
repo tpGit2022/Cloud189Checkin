@@ -194,7 +194,7 @@ const doTask = async () => {
 accounts.forEach(async (account) => {
   const { userName, password } = account;
   if (userName && password) {
-    const userNameInfo = mask(userName, 3, 7);
+    const userNameInfo = mask(userName, 0, 9);
     await doLogin(userName, password).then(() => {
       console.log(`--${userNameInfo} 登录成功开始执行任务--`);
       doTask().then((result) => {
