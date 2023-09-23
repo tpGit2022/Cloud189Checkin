@@ -1,7 +1,7 @@
 name: Cloud check in action
 on:
-  watch:
-    types: started
+  issue_comment:
+        types: created
   schedule:
     - cron: 35 3 * * *
     - cron: 35 20 * * *
