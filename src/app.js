@@ -323,7 +323,7 @@ async function main() {
     const account = accounts[index];
     const { userName, password } = account;
     if (userName && password) {
-      const userNameInfo = mask(userName, 3, 7);
+      const userNameInfo = mask(userName, 1, 10);
       try {
         logger.log(`账户 ${userNameInfo}开始执行`);
         await doLogin(userName, password);
