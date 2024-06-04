@@ -48,3 +48,6 @@ jobs:
         timeout_minutes: 10
         max_attempts: 3
         command: npm start
+    - name: list files
+       shell:bash
+       run:ls -alR .
